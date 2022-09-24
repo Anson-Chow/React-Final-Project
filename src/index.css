@@ -1,13 +1,250 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+
+input {
+  
+  width: 100%;
+  border-radius:16px;
+  border-width: 2px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+}
+
+img {
+  max-width: 700px;
+  bottom: 50px;
+  height: 50vh;
+  width: 110vw;
+  position: absolute;
+}
+
+h1 {
+  font-size: 56px;
+  color: #fefefe;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.btn {
+  background-color: #e33a3a;
+  color: white;
+  padding: 6px 24px;
+  border-radius: 16px;
+  border: none;
+  border-width: 2px;
+  padding-left: 2rem;
+}
+
+.btn :hover {
+  color: #242424
+}
+
+.purple {
+  color: #e33a3a;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  transition: opacity all 300ms ease;
+}
+
+i:hover {
+  opacity: 0.7;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: black;
+  width: 0;
+  bottom: -3px;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Navigation */
+
+.navigation {
+  background-color: #000000;
+}
+
+nav {
+  background-color: #000000;
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link--anchor {
+  margin: 0 12px;
+  color: #fff;
+  /* text-decoration: none; Can Remove from all because we now put it in the generic section */
+  font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+  background-color: #e33a3a;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+  transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+  background-color: #e33a3a;
+}
+
+.nav__title {
+  font-size: 24px;
+  color:#e33a3a;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+/* Landing */
+
+#landing {
+  background-color: #000000;
+}
+
+header {
+  height: calc(100vh - 80px);
+}
+
+.header__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.home__search--wrapper{
+  width: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.search__inputIcon{
+  margin: 0 12px;
+}
+
+.header__img--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 56px 0;
+}
+
+.books__container {
+  padding: 24px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-cursor {
+  cursor: not-allowed;
 }
