@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: rgb(43, 43, 45)
 }
 
 html {
@@ -37,16 +38,8 @@ span {
   line-height: 1.25;
 }
 
-img {
-  max-width: 700px;
-  bottom: 50px;
-  height: 50vh;
-  width: 110vw;
-  position: absolute;
-}
-
 h1 {
-  font-size: 56px;
+  font-size: 52px;
   color: #fefefe;
   margin-bottom: 24px;
   text-align: center;
@@ -69,11 +62,13 @@ button:active {
 .btn {
   background-color: #e33a3a;
   color: white;
-  padding: 6px 24px;
+  padding: 5px 22px;
   border-radius: 16px;
   border: none;
   border-width: 2px;
   padding-left: 2rem;
+  margin-top: 1px;
+  transition: 300ms all ease;
 }
 
 .btn :hover {
@@ -82,6 +77,10 @@ button:active {
 
 .purple {
   color: #e33a3a;
+}
+
+a:hover{
+  cursor: pointer;
 }
 
 p {
@@ -114,12 +113,10 @@ textarea:focus, input:focus{
   transition: all 300ms ease;
 }
 
-.link__hover-effect--white:after {
-  background-color: white;
-}
+
 
 .link__hover-effect--black:after {
-  background-color: black;
+  background-color: white;
 }
 
 .link__hover-effect:hover:after {
@@ -133,12 +130,9 @@ li {
 
 /* Navigation */
 
-.navigation {
-  background-color: #000000;
-}
+
 
 nav {
-  background-color: #000000;
   height: 100px;
   width: 100%;
   max-width: 1000px;
@@ -156,7 +150,6 @@ nav {
 .nav__link--anchor {
   margin: 0 12px;
   color: #fff;
-  /* text-decoration: none; Can Remove from all because we now put it in the generic section */
   font-weight: 700;
 }
 
@@ -169,7 +162,7 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-  background-color: #e33a3a;
+  background-color: #ff0909;
 }
 
 .nav__title {
@@ -185,6 +178,9 @@ nav {
   background-color: #000000;
 }
 
+.home__img--wrapper{
+  margin-top: 20px;
+}
 header {
   height: calc(100vh - 80px);
 }
@@ -203,7 +199,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  margin-top: 400px;
 }
 
 .home__search--wrapper{
@@ -212,6 +208,15 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 28px;
+}
+
+.movies__search--wrapper{
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  margin: 0 auto;
 }
 
 .search__inputIcon{
@@ -247,4 +252,263 @@ header {
 
 .no-cursor {
   cursor: not-allowed;
+}
+
+
+/* FIX IT */
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+
+button:hover {
+  background-color: white;
+  color: #000000
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.848);
+  color: black;
+  padding-left: 40px;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+/* LANDING */
+
+
+.input__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+
+/* MOVIES */
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.movie {
+  max-width: calc(100% / 3);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.movie:hover .movie__title {
+  text-decoration: underline;
+}
+
+.movie__img--wrapper:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
+}
+
+.movie__title {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  color: white;
+}
+
+/* Movies */
+
+.browse {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.search__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  position: relative;
+  max-width: 600px;
+}
+
+.searchTxt {
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+.search__text {
+  color: white;
+  margin-top: 60px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.search__icon {
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  color: #c770fc;
+  background-color: transparent;
+  transition: all 200ms ease;
+}
+
+/* MovieInfo */
+
+.movieInfo__wrapper{
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 12px;
+}
+.movieInfo__poster{
+  height: 500px;
+  width: 400px;
+}
+
+.movieInfo__data{
+  color: white;
+  margin-left: 40px;
+  font-weight: 400;
+}
+
+.movieInfo__data--para{
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.movieInfo__data--descriptors{
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.movieInfo__data--plot{
+  padding: 12px;
+  
+}
+
+/* Movie Skeleton */
+
+
+.movie__title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie__title--skeleton {
+  margin-top: 20px;
+  width: 180px;
+  height: 16px;
+  background-color: lightgray;
+}
+
+.movie__body {
+  padding: 0 8px;
+}
+
+.movie__body--skeleton {
+  width: 285px;
+  height: 420px;
+  background-color: lightgray;
+  
+}
+
+/* MovieInfo Skeleton */
+
+.movieInfo__title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-top: 8px;
+}
+
+.movieInfo__title--skeleton {
+  margin-top: 20px;
+  width: 540px;
+  height: 20px;
+  background-color: lightgray;
+}
+
+.movieInfo__body {
+  padding: 0 8px;
+}
+
+.movieInfo__body--skeleton {
+  background-color: lightgray;
+  height: 500px;
+  width: 400px;
+}
+
+.movieInfo__data--paraskeleton{
+  background-color: lightgray;
+}
+
+/* MovieInfo Title and Description Skeleton */
+
+.movieInfo__title--top,
+.movieInfo__title--bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-top: 8px;
+}
+
+.movieInfo__title--skeleton--top {
+  margin-top: 20px;
+  width: 540px;
+  height: 72px;
+  background-color: lightgray;
+  margin-bottom: 24px
+}
+
+.movieInfo__title--skeleton--bottom{
+  margin-top: 20px;
+  width: 540px;
+  height: 50px;
+  background-color: lightgray;
+  margin-top: 24px;
+  padding-top: 12px;
+}
+
+/* ArrowBack Icon */
+.arrowBack__Icon{
+ cursor: pointer;
+ color: white;
+ position: relative;
 }

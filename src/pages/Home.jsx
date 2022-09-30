@@ -1,42 +1,27 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-import MovieLogo from "../assets/movie-logo.jpg";
+import MovieLogo from "../assets/movie-logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import AppContext from "./AppContext";
 
 
 const Home = () => {
-  // const { search } = useParams();
-  const {movies, handleMoviesSearch} = useContext(AppContext);
-  const [searchId, setSearchId] = useState('');
-  // const [movies, setMovies] = useState([]);
+
   const navigate = useNavigate();
+  const [userInput, setUserInput] = useState("")
+  const [loading, setLoading] = useState('false')
 
-  function onSearch() {
-    fetchMovies();
+  function initialSearch(event){
+    setLoading(true);
+    setTimeout(() => {
+      navigate(`/search/${userInput}`)
+    }, 300)
   }
 
-
-  async function fetchMovies() {
-    const { data } = await axios.get(
-      `https://www.omdbapi.com/?&apikey=b97ff1dd&s=${searchId}`
-    );
-    // console.log(data);
-    // console.log(searchId)
-    handleMoviesSearch(data)
-    console.log(movies)
-    // console.log(movies)
-    // navigate('/id');
+  const search = (event) => {
+    event.preventDefault();
   }
-  const handleClick = () => {
-    navigate('/id');
-    }
-
-  useEffect(() => {
-    fetchMovies();
-  }, []);
 
   return (
     <div>
@@ -46,36 +31,39 @@ const Home = () => {
             <div className="header__description">
               <h1>Canada's most popular online movie platform</h1>
               <h2>
-                Watch any movie with <span className="purple">Metflix</span>
+                Watch any movie with <span className="purple">MovieNet</span>
               </h2>
               <div className="home__search--wrapper">
                 <input
                   type="text"
-                  value={searchId}
+                  value={userInput}
+                  placeholder="Search Movies"
                   onChange={(event) => {
-                    setSearchId(event.target.value);
+                    setUserInput(event.target.value);
                   }}
                   onKeyPress={(event) => {
                     if (event.key === "Enter") {
-                        onSearch()
+                        initialSearch()
                     }
                   }}
                 />
                 <div>
-                  <a href="">
-                    <button className="btn" onClick={handleClick}>
+  
+                    <button className="btn" onClick={() => initialSearch()}>
                       <SearchIcon
-                        sx={{ fontSize: "48px" }}
+                        sx={{ fontSize: "48px", background: 'none' }}
                         className="search__inputIcon"
                       />
                     </button>
-                  </a>
+  
                 </div>
               </div>
             </div>
-            <figure className="header__img--wrapper">
-              <img src={MovieLogo} alt="movie logo" />
+            <div>
+            <figure className="home__img--wrapper">
+              <img src={MovieLogo} className="home__img" alt="movie logo" />
             </figure>
+            </div>
           </div>
         </header>
       </section>
