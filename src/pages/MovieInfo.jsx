@@ -21,17 +21,16 @@ const MovieInfo = () => {
     setLoading(true);
     setTimeout(() => {
       fetchMovieData();
-    }, 300);
+    }, 200);
   }, []);
 
   return (
     <div>
       {!loading ? (
-        <div>
-          <div>
+        <div className="movieInfo__container">
+          <div className="arrowBack__Icon">
             <ArrowBackIcon
               sx={{ fontSize: "60px", background: "none", border: "none" }}
-              className="arrowBack__Icon"
               onClick={() => navigate(`/search/ `)}
             />
           </div>

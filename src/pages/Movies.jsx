@@ -15,7 +15,7 @@ const Movies = () => {
     setLoading(true);
     setTimeout(() => {
       fetchMovies(searchInput);
-    }, 400);
+    }, 300);
   }
 
   async function fetchMovies() {

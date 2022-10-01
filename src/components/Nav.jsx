@@ -28,7 +28,7 @@ const Nav = () => {
           </li>
           <li className="nav__link">
             <a
-              href="mailto:chow.anson25@gmail.com"
+              href=""
               className="nav__link--anchor nav__link--anchor-primary"
             >
               Contact
