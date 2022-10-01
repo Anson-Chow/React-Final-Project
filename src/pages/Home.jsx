@@ -5,23 +5,21 @@ import MovieLogo from "../assets/movie-logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
 const Home = () => {
-
   const navigate = useNavigate();
-  const [userInput, setUserInput] = useState("")
-  const [loading, setLoading] = useState('false')
+  const [userInput, setUserInput] = useState("");
+  const [loading, setLoading] = useState("false");
 
-  function initialSearch(event){
+  function initialSearch(event) {
     setLoading(true);
     setTimeout(() => {
-      navigate(`/search/${userInput}`)
-    }, 300)
+      navigate(`/search/${userInput}`);
+    }, 300);
   }
 
   const search = (event) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <div>
@@ -42,27 +40,27 @@ const Home = () => {
                     setUserInput(event.target.value);
                   }}
                   onKeyPress={(event) => {
-                    if (event.key === "Enter") {
-                        initialSearch()
+                    if (event.key === "Enter" && userInput) {
+                      initialSearch();
+                    } else {
+                      return false;
                     }
                   }}
                 />
                 <div>
-  
-                    <button className="btn" onClick={() => initialSearch()}>
-                      <SearchIcon
-                        sx={{ fontSize: "48px", background: 'none' }}
-                        className="search__inputIcon"
-                      />
-                    </button>
-  
+                  <button className="btn" onClick={() => userInput ? initialSearch() : null}>
+                    <SearchIcon
+                      sx={{ fontSize: "48px", background: "none" }}
+                      className="search__inputIcon"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
             <div>
-            <figure className="home__img--wrapper">
-              <img src={MovieLogo} className="home__img" alt="movie logo" />
-            </figure>
+              <figure className="home__img--wrapper">
+                <img src={MovieLogo} className="home__img" alt="movie logo" />
+              </figure>
             </div>
           </div>
         </header>

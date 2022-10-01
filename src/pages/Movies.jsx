@@ -19,6 +19,7 @@ const Movies = () => {
   }
 
   async function fetchMovies() {
+    
     const { data } = await axios.get(
       `https://www.omdbapi.com/?&apikey=b97ff1dd&s=${
         searchInput || params.searchInput
@@ -54,6 +55,7 @@ const Movies = () => {
                 onKeyPress={(event) => {
                   if (event.key === "Enter") {
                     onSearch();
+              
                   }
                 }}
               />
@@ -98,6 +100,7 @@ const Movies = () => {
 };
 
 export default Movies;
+
 
 // {movies.Search?.map((movie) => (
 //   <div key= {movie.imdbID}>

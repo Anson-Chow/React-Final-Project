@@ -28,7 +28,6 @@ const Nav = () => {
           </li>
           <li className="nav__link">
             <a
-              href=""
               className="nav__link--anchor nav__link--anchor-primary"
             >
               Contact

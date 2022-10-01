@@ -31,7 +31,7 @@ const MovieInfo = () => {
           <div className="arrowBack__Icon">
             <ArrowBackIcon
               sx={{ fontSize: "60px", background: "none", border: "none" }}
-              onClick={() => navigate(`/search/ `)}
+              onClick={() => navigate(`/search/cars `)}
             />
           </div>
           <div className="movieInfo__wrapper">

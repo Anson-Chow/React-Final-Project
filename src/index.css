@@ -201,10 +201,11 @@ header {
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  height: 50%;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__description {
