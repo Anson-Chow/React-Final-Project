@@ -591,9 +591,6 @@ p {
       display: none;
     }
     
-    h1{
-      font-size: 24px;
-    }
 
     p{
       font-size: 16px;
@@ -647,6 +644,7 @@ p {
     .movieInfo__data--title{
       max-width: 350px;
       margin-left: 50px;
+      font-size: 24px;
     }
 
     .movieInfo__data{
