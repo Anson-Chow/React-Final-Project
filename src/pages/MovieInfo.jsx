@@ -43,7 +43,7 @@ const MovieInfo = () => {
               />
             </div>
             <div className="movieInfo__data">
-              <h1>{movieData.Title}</h1>
+              <h1 className="movieInfo__data--title">{movieData.Title}</h1>
               <div className="movieInfo__data--para">
                 <p>
                   <span className="movieInfo__data--descriptors">Year:</span>{" "}

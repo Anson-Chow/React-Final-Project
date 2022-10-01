@@ -12,6 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 input {
   width: 100%;
   border-radius: 16px;
@@ -36,9 +41,13 @@ span {
   line-height: 1.25;
 }
 
-body{
+html, body {
   overflow-x: hidden;
 }
+body {
+  position: relative
+}
+
 h1 {
   font-size: 52px;
   color: #fefefe;
@@ -215,10 +224,11 @@ header {
 }
 
 .movies__search--wrapper {
-  width: 600px;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4px 8px;
   margin-top: 28px;
   margin: 0 auto;
 }
@@ -260,10 +270,6 @@ header {
 
 /* FIX IT */
 
-img {
-  width: 100%;
-  height: 100%;
-}
 
 button:hover {
   background-color: white;
@@ -301,7 +307,7 @@ input:focus {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
 }
 
 .movie {
@@ -405,7 +411,8 @@ input:focus {
 }
 .movieInfo__poster {
   height: 500px;
-  width: 400px;
+  width: 450px;
+  padding: 0 48px;
 }
 
 .movieInfo__data {
@@ -529,7 +536,7 @@ p {
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
   .movies {
-    width: 750px;
+    max-width: 750px;
   }
 
   .movie {
@@ -544,8 +551,9 @@ p {
     padding-top: 150px;
   }
   .movieInfo__poster {
+    padding: 0 60px;
     margin-top: 150px;
-    margin-left: 250px;
+    margin-left: 226px;
     margin-bottom: 25px;
   }
 
@@ -577,21 +585,23 @@ p {
 }
 
 
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     /* Home */
     .nav__link:not(:last-child) {
       display: none;
     }
+    
     h1{
-      font-size: 48px;
+      font-size: 24px;
     }
 
-    h2{
-      font-size: 26px;
+    p{
+      font-size: 16px;
     }
 
     input{
       width: 50%;
+      padding-left: 12px;
     }
 
     .home__img{
@@ -606,12 +616,16 @@ p {
 
     /* Movies */
 
+    .search__text{
+      
+      margin-left: 0px;
+    }
     .movies__search--wrapper{
-      width: 500px;
+      width: 100%;
     }
 
     .movies {
-      width: 480px;
+      max-width: 480px;
       transition: all 300ms ease;
     }
 
@@ -625,18 +639,29 @@ p {
 
     /* MovieInfo */
 
-
+    
     .movieInfo__poster{
       margin-top: 120px;
     }
 
+    .movieInfo__data--title{
+      max-width: 350px;
+      margin-left: 50px;
+    }
+
     .movieInfo__data{
       width: 470px;
-   
+      
+    }
+
+    .movieInfo__data--para{
+      padding: 0 12px 0 24px;
+      margin-left: 16px;
+      width: 400px;
     }
     .arrowBack__Icon{
       top: 50px;
-      left: 42px;
+      left: 12px;
     }
 
     .movieInfo__body--skeleton {
