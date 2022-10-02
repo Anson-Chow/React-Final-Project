@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <div className="navigation">
       <nav>
-        <div className="nav__title">MovieNet</div>
+        <div className="nav__title" onClick={() => navigate(`/`)}>MovieNet</div>
         <ul className="nav__link--list">
           <li className="nav__link">
             <a

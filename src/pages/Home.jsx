@@ -48,7 +48,10 @@ const Home = () => {
                   }}
                 />
                 <div>
-                  <button className="btn" onClick={() => userInput ? initialSearch() : null}>
+                  <button
+                    className="btn"
+                    onClick={() => (userInput ? initialSearch() : null)}
+                  >
                     <SearchIcon
                       sx={{ fontSize: "48px", background: "none" }}
                       className="search__inputIcon"
@@ -59,7 +62,11 @@ const Home = () => {
             </div>
             <div>
               <figure className="home__img--wrapper">
-                <img src={MovieLogo} className="home__img" alt="movie logo" />
+                <img
+                  src={MovieLogo}
+                  className="home__img"
+                  alt="movie logo"
+                />
               </figure>
             </div>
           </div>

@@ -180,6 +180,7 @@ nav {
   color: #e33a3a;
   margin: 0 12px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* Landing */
@@ -192,6 +193,7 @@ nav {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 header {
   height: calc(100vh - 80px);
@@ -413,7 +415,7 @@ input:focus {
 .movieInfo__poster {
   height: 500px;
   width: 450px;
-  padding: 0 48px;
+  /* padding: 0 48px; */
 }
 
 .movieInfo__data {
@@ -421,6 +423,7 @@ input:focus {
   margin-left: 40px;
   font-weight: 400;
   text-align: center;
+  width: 100%;
   
 }
 
@@ -552,7 +555,7 @@ p {
     padding-top: 150px;
   }
   .movieInfo__poster {
-    padding: 0 60px;
+    /* padding: 0 60px; */
     margin-top: 150px;
     margin-left: 226px;
     margin-bottom: 25px;
@@ -642,27 +645,30 @@ p {
     
     .movieInfo__poster{
       margin-top: 120px;
+      width: 350px;
     }
 
     .movieInfo__data--title{
       max-width: 350px;
-      margin-left: 50px;
       font-size: 24px;
     }
 
     .movieInfo__data{
-      width: 470px;
+      max-width: 350px;
       
     }
 
     .movieInfo__data--para{
-      padding: 0 12px 0 24px;
-      margin-left: 16px;
+      /* padding: 0 12px 0 24px; */
+      padding-right: 60px;
       width: 400px;
     }
     .arrowBack__Icon{
       top: 50px;
       left: 12px;
+      width: 200px;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .movieInfo__body--skeleton {
